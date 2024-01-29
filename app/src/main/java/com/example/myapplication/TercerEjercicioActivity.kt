@@ -1,10 +1,8 @@
 package com.example.myapplication
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import com.example.myapplication.databinding.ActivitySegundoEjercicioBinding
+import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityTercerEjercicioBinding
 
 class TercerEjercicioActivity : AppCompatActivity() {
