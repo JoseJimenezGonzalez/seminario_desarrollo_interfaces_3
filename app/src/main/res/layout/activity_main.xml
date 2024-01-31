@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background_phone">
 
     <TextView
         android:id="@+id/tvTitulo"
@@ -14,10 +15,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btnActividad1"
-        android:text="Seminario de desarrollo de interfaces">
+        android:text="Seminario de desarrollo de interfaces"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black">
     </TextView>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnActividad1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,9 +30,9 @@
         app:layout_constraintTop_toBottomOf="@id/tvTitulo"
         app:layout_constraintBottom_toTopOf="@id/btnActividad2"
         android:text="Ejercicio 1">
-    </Button>
+    </androidx.appcompat.widget.AppCompatButton>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnActividad2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,9 +41,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btnActividad3"
         android:text="Ejercicio 2">
-    </Button>
+    </androidx.appcompat.widget.AppCompatButton>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnActividad3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,6 +52,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnActividad2"
         android:text="Ejercicio 3">
-    </Button>
+    </androidx.appcompat.widget.AppCompatButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -62,5 +62,10 @@ class SegundoEjercicioActivity : AppCompatActivity() {
                 binding.ivTercera.setImageResource(R.drawable.card_joker)
             }
         }
+
+        binding.ivBavk.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

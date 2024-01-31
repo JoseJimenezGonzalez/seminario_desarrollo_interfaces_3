@@ -40,6 +40,6 @@ class PimerEjercicioActivity1 : AppCompatActivity() {
     }
     private fun actualizarContador() {
         val segundos = tiempoRestante / 1000
-        binding.tvCuentaAtras.text = "$segundos"
+        binding.tvCuentaAtras.text = "$segundos" + " s"
     }
 }

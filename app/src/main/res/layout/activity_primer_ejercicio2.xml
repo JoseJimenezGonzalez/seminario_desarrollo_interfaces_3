@@ -4,17 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PrimerEjercicioActivity2">
+    tools:context=".PrimerEjercicioActivity2"
+    android:background="@drawable/background_phone">
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/ivBavk"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_back">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ivFoto"
+        android:text="Se ha agotado el tiempo"
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        android:textStyle="bold">
+    </TextView>
 
     <ImageView
         android:id="@+id/ivFoto"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:src="@drawable/img_boom">
+        android:src="@drawable/pngegg">
     </ImageView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

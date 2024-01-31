@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +21,8 @@ class TercerEjercicioActivity : AppCompatActivity() {
         binding = ActivityTercerEjercicioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.clCambiarColor.setBackgroundColor(Color.GREEN)
+
         // Inicializar el contador regresivo
         countDownTimer = object : CountDownTimer(tiempoRestante, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -35,22 +39,30 @@ class TercerEjercicioActivity : AppCompatActivity() {
 
         // Iniciar el contador regresivo
         countDownTimer.start()
+
+        binding.ivBavk.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun actualizarSemaforo() {
         when {
             tiempoRestante > 2000 && estadoSemaforo != 0 -> {
                 // Cambiar a verde
+                binding.clCambiarColor.setBackgroundColor(Color.GREEN)
                 binding.ivFoto.setImageResource(R.drawable.semaforo_verde)
                 estadoSemaforo = 0
             }
             tiempoRestante in 1000..2000 && estadoSemaforo != 1 -> {
                 // Cambiar a amarillo
+                binding.clCambiarColor.setBackgroundColor(Color.YELLOW)
                 binding.ivFoto.setImageResource(R.drawable.semaforo_amarillo)
                 estadoSemaforo = 1
             }
             tiempoRestante in 0..1000 && estadoSemaforo != 2 -> {
                 // Cambiar a rojo
+                binding.clCambiarColor.setBackgroundColor(Color.RED)
                 binding.ivFoto.setImageResource(R.drawable.semaforo_rojo)
                 estadoSemaforo = 2
             }
